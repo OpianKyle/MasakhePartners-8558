@@ -1,4 +1,9 @@
-import { drizzle } from 'drizzle-orm/d1';
-import { env } from "cloudflare:workers";
+import { drizzle } from "drizzle-orm/mysql2";
 
-export const database = drizzle(env.DB);
+const databaseUrl = process.env.DATABASE_URL;
+
+if (!databaseUrl) {
+  throw new Error("DATABASE_URL is not set");
+}
+
+export const database = drizzle(databaseUrl);
