@@ -18,6 +18,9 @@ export default defineConfig({
                 hmr: { overlay: false, },
                 watch: {
                         ignored: ["**/.cache/**", "**/node_modules/**", "**/.local/**"]
+                },
+                proxy: {
+                        "/api": "http://localhost:8080",
                 }
         }
 });

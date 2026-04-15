@@ -21,22 +21,17 @@ args = "Start application"
 name = "Start application"
 author = "agent"
 
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "bun run dev"
-waitForPort = 5000
-
 [workflows.workflow.metadata]
 outputType = "webview"
 
-[[ports]]
-localPort = 5000
-externalPort = 5000
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "bun --hot src/api/server.ts & bunx vite"
+waitForPort = 5000
 
 [[ports]]
-localPort = 9229
+localPort = 5000
 externalPort = 80
-exposeLocalhost = true
 
 [deployment]
 deploymentTarget = "static"

@@ -24,12 +24,26 @@ export default function Contact() {
     return () => observer.disconnect();
   }, []);
 
+  const [error, setError] = useState("");
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSent(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) throw new Error(data.error || "Failed to send.");
+      setSent(true);
+    } catch (err: any) {
+      setError(err.message || "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -237,6 +251,17 @@ export default function Contact() {
                       onBlur={e => e.target.style.borderColor = "rgba(17,136,73,0.2)"}
                     />
                   </div>
+                  {error && (
+                    <div style={{
+                      padding: "12px 16px",
+                      background: "rgba(220,50,50,0.1)",
+                      border: "1px solid rgba(220,50,50,0.3)",
+                      borderRadius: "2px",
+                      color: "#ff6b6b",
+                      fontFamily: "DM Sans, sans-serif",
+                      fontSize: "13px",
+                    }}>{error}</div>
+                  )}
                   <button
                     type="submit"
                     disabled={loading}
