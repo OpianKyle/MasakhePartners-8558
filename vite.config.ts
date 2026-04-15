@@ -17,7 +17,7 @@ export default defineConfig({
                 allowedHosts: true,
                 hmr: { overlay: false, },
                 watch: {
-                        ignored: ["**/.cache/**", "**/node_modules/**"]
+                        ignored: ["**/.cache/**", "**/node_modules/**", "**/.local/**"]
                 }
         }
 });
