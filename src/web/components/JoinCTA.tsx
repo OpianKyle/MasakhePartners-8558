@@ -216,6 +216,7 @@ export default function JoinCTA() {
 
         {/* Registration Form */}
         <div id="join-form" className="join-anim" style={{
+          display: "none",
           opacity: 0, transform: "translateY(30px)", transition: "all 0.6s ease 0.3s",
           maxWidth: "680px", margin: "0 auto",
           background: "#1e3454",
