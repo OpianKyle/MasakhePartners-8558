@@ -96,16 +96,17 @@ export default function Hero() {
               opacity: 0, transform: "translateY(30px)", transition: "all 0.7s ease",
               display: "flex", gap: "16px", flexWrap: "wrap", marginBottom: "48px",
             }}>
-              <button onClick={scrollToJoin} style={{
+              <a href="https://masakheportal.co.za/register" target="_blank" rel="noopener noreferrer" style={{
                 padding: "16px 38px",
                 background: "#118849", border: "none", color: "#ffffff",
                 fontFamily: "DM Sans, sans-serif", fontWeight: "700",
                 fontSize: "15px", borderRadius: "4px", cursor: "pointer",
+                textDecoration: "none", display: "inline-block",
                 transition: "background 0.2s", letterSpacing: "0.3px",
               }}
-                onMouseEnter={e => (e.currentTarget.style.background = "#15a85a")}
-                onMouseLeave={e => (e.currentTarget.style.background = "#118849")}
-              >Start Earning Today →</button>
+                onMouseEnter={e => ((e.currentTarget as HTMLElement).style.background = "#15a85a")}
+                onMouseLeave={e => ((e.currentTarget as HTMLElement).style.background = "#118849")}
+              >Start Earning Today →</a>
               <button onClick={() => document.querySelector("#compensation")?.scrollIntoView({ behavior: "smooth" })} style={{
                 padding: "16px 38px", background: "transparent",
                 border: "1px solid rgba(255,255,255,0.3)", color: "#ffffff",

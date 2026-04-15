@@ -192,10 +192,13 @@ export default function JoinCTA() {
                 ))}
               </ul>
 
-              <button
-                onClick={(e) => { e.stopPropagation(); setFormData((fd) => ({ ...fd, package: pkg.name })); document.querySelector("#join-form")?.scrollIntoView({ behavior: "smooth" }); }}
+              <a
+                href="https://masakheportal.co.za/register"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
                 style={{
-                  width: "100%", padding: "13px",
+                  display: "block", width: "100%", padding: "13px",
                   background: pkg.featured
                     ? "linear-gradient(90deg, #118849, #15a85a)"
                     : "transparent",
@@ -204,8 +207,9 @@ export default function JoinCTA() {
                   fontFamily: "DM Sans, sans-serif", fontWeight: "700",
                   fontSize: "14px", borderRadius: "2px", cursor: "pointer",
                   letterSpacing: "0.5px", transition: "all 0.2s",
+                  textDecoration: "none", textAlign: "center", boxSizing: "border-box",
                 }}
-              >{pkg.cta}</button>
+              >{pkg.cta}</a>
             </div>
           ))}
         </div>

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "wouter";
 
 const C = {
   navy: "#192943", navyDeep: "#0f326b", green: "#118849",
@@ -10,7 +9,6 @@ const C = {
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [, navigate] = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -70,21 +68,14 @@ export default function Navbar() {
                 onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.72)")}
               >{link.label}</button>
             ))}
-            <button onClick={() => navigate("/login")} style={{
-              padding: "8px 18px", border: "1px solid rgba(255,255,255,0.25)",
-              background: "transparent", color: C.white, borderRadius: "4px",
-              fontSize: "13px", fontFamily: "DM Sans, sans-serif", fontWeight: "600", cursor: "pointer", transition: "all 0.2s",
-            }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(21,168,90,0.7)"; e.currentTarget.style.color = "#15a85a"; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.25)"; e.currentTarget.style.color = C.white; }}
-            >Login</button>
-            <button onClick={() => scrollTo("#join")} style={{
+            <a href="https://masakheportal.co.za/register" target="_blank" rel="noopener noreferrer" style={{
               padding: "9px 22px", background: "#118849", border: "none", color: C.white,
-              borderRadius: "4px", fontSize: "13px", fontFamily: "DM Sans, sans-serif", fontWeight: "700", cursor: "pointer", transition: "background 0.2s",
+              borderRadius: "4px", fontSize: "13px", fontFamily: "DM Sans, sans-serif", fontWeight: "700", cursor: "pointer",
+              textDecoration: "none", display: "inline-block", transition: "background 0.2s",
             }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#15a85a")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#118849")}
-            >Join Now</button>
+              onMouseEnter={e => ((e.currentTarget as HTMLElement).style.background = "#15a85a")}
+              onMouseLeave={e => ((e.currentTarget as HTMLElement).style.background = "#118849")}
+            >Register Now</a>
           </div>
 
           {/* Mobile toggle */}
@@ -105,15 +96,11 @@ export default function Navbar() {
               }}>{link.label}</button>
             ))}
             <div style={{ display: "flex", gap: "12px", marginTop: "16px" }}>
-              <button onClick={() => { navigate("/login"); setMenuOpen(false); }} style={{
-                flex: 1, padding: "10px", border: "1px solid rgba(255,255,255,0.2)",
-                background: "transparent", color: C.white, borderRadius: "4px",
-                fontSize: "14px", fontFamily: "DM Sans, sans-serif", cursor: "pointer",
-              }}>Login</button>
-              <button onClick={() => scrollTo("#join")} style={{
+              <a href="https://masakheportal.co.za/register" target="_blank" rel="noopener noreferrer" style={{
                 flex: 1, padding: "10px", background: "#118849", border: "none", color: C.white,
                 borderRadius: "4px", fontSize: "14px", fontFamily: "DM Sans, sans-serif", fontWeight: "700", cursor: "pointer",
-              }}>Join Now</button>
+                textDecoration: "none", textAlign: "center", display: "block",
+              }} onClick={() => setMenuOpen(false)}>Register Now</a>
             </div>
           </div>
         )}
