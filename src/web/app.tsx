@@ -3,7 +3,7 @@ import Index from "./pages/index";
 import LoginPage from "./pages/login";
 import Dashboard from "./pages/dashboard";
 import { Provider } from "./components/provider";
-import { AgentFeedback, RunableBadge } from "@runablehq/website-runtime";
+import { AgentFeedback } from "@runablehq/website-runtime";
 
 function App() {
   return (
@@ -14,7 +14,6 @@ function App() {
         <Route path="/dashboard" component={Dashboard} />
       </Switch>
       {import.meta.env.DEV && <AgentFeedback />}
-      {<RunableBadge />}
     </Provider>
   );
 }
