@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+/* ── Masakhe Group Brand Palette ── */
+:root {
+  --radius: 0.375rem;
+
+  /* Brand colours */
+  --navy:        #192943;   /* primary dark – headings, navbar */
+  --navy-deep:   #0f326b;   /* darker navy – hero bg, dark sections */
+  --navy-mid:    #1a3a6b;   /* mid tone */
+  --green:       #118849;   /* CTA green */
+  --green-light: #15a85a;   /* hover green */
+  --green-dim:   #0d6b3a;   /* pressed green */
+  --slate:       #5e708d;   /* secondary text */
+  --light-bg:    #eef2f6;   /* light section bg */
+  --white:       #ffffff;
+
+  /* Semantic tokens */
+  --background:        var(--navy);
+  --foreground:        var(--white);
+  --card:              #1e3454;
+  --card-foreground:   var(--white);
+  --popover:           #1e3454;
+  --popover-foreground:var(--white);
+  --primary:           var(--green);
+  --primary-foreground:var(--white);
+  --secondary:         #253d5e;
+  --secondary-foreground: var(--white);
+  --muted:             #1e3454;
+  --muted-foreground:  var(--slate);
+  --accent:            var(--green);
+  --accent-foreground: var(--white);
+  --destructive:       #ef4444;
+  --border:            rgba(255,255,255,0.1);
+  --input:             #253d5e;
+  --ring:              var(--green);
+}
+
+/* ── Base ── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #192943;
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #ffffff;
+  }
+  .font-mono-accent {
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+/* ── Animations ── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(17,136,73,0.4); }
+  50%       { box-shadow: 0 0 0 12px rgba(17,136,73,0); }
+}
+
+/* ── Utility classes ── */
+.green-shimmer {
+  background: linear-gradient(90deg, #118849, #15a85a, #118849);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.green-shimmer-btn {
+  background: linear-gradient(90deg, #118849, #15a85a, #118849);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-in-view {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animate-in-view.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.divider-green {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #118849, transparent);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #192943; }
+::-webkit-scrollbar-thumb { background: #118849; border-radius: 2px; }
