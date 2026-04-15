@@ -4,5 +4,7 @@ export default defineConfig({
   schema: './src/api/database/schema.ts',
   out: './src/api/migrations',
   dialect: 'mysql',
-  driver: 'mysql2',
+  dbCredentials: {
+    url: process.env.DATABASE_URL!,
+  },
 });
