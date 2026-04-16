@@ -10,9 +10,9 @@ export default function Footer() {
       padding: "80px 24px 40px",
     }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "48px", marginBottom: "64px" }}>
+        <div className="footer-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "48px", marginBottom: "64px" }}>
           {/* Brand */}
-          <div>
+          <div className="footer-brand">
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "20px" }}>
               <div style={{
                 width: "36px", height: "36px",

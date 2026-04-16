@@ -135,3 +135,33 @@
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #192943; }
 ::-webkit-scrollbar-thumb { background: #118849; border-radius: 2px; }
+
+/* ── Responsive Layout ── */
+@media (max-width: 768px) {
+  /* Hero */
+  .hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .hero-right { display: none !important; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* How It Works */
+  .how-it-works-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .how-it-works-grid > div { order: unset !important; }
+
+  /* Compensation */
+  .comp-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .comp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+  .footer-brand { grid-column: 1 / -1 !important; }
+
+  /* JoinCTA form */
+  .join-form-grid { grid-template-columns: 1fr !important; }
+
+  /* Sections padding */
+  section { padding-left: 16px !important; padding-right: 16px !important; }
+  section[style*="padding: 120px"] { padding-top: 80px !important; padding-bottom: 80px !important; }
+}

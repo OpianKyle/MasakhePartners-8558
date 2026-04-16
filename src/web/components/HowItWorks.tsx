@@ -42,7 +42,7 @@ export default function HowItWorks() {
 
         <div style={{ display: "flex", flexDirection: "column", gap: "80px" }}>
           {steps.map((step, i) => (
-            <div key={step.number} className="anim-item" style={{
+            <div key={step.number} className="anim-item how-it-works-grid" style={{
               opacity: 0, transform: "translateY(30px)", transition: `all 0.6s ease ${i * 0.1}s`,
               display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px", alignItems: "center",
             }}>

@@ -61,7 +61,7 @@ export default function Compensation() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "start" }}>
+          <div className="comp-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "start" }}>
             {/* Binary Tree */}
             <div className="comp-anim" style={{ opacity: 0, transform: "translateY(30px)", transition: "all 0.6s ease 0.1s" }}>
               <div style={{ background: "rgba(15,50,107,0.85)", backdropFilter: "blur(12px)", border: "1px solid rgba(17,136,73,0.3)", borderRadius: "6px", padding: "40px 32px" }}>
@@ -109,8 +109,8 @@ export default function Compensation() {
 
             {/* Right column */}
             <div>
-              <div className="comp-anim" style={{ opacity: 0, transform: "translateY(30px)", transition: "all 0.6s ease 0.2s", background: "rgba(15,50,107,0.85)", backdropFilter: "blur(12px)", border: "1px solid rgba(17,136,73,0.2)", borderRadius: "6px", overflow: "hidden", marginBottom: "24px" }}>
-                <table style={{ width: "100%", borderCollapse: "collapse" }}>
+              <div className="comp-anim comp-table-wrap" style={{ opacity: 0, transform: "translateY(30px)", transition: "all 0.6s ease 0.2s", background: "rgba(15,50,107,0.85)", backdropFilter: "blur(12px)", border: "1px solid rgba(17,136,73,0.2)", borderRadius: "6px", overflow: "hidden", marginBottom: "24px" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "400px" }}>
                   <thead>
                     <tr style={{ background: "rgba(17,136,73,0.12)", borderBottom: "1px solid rgba(17,136,73,0.2)" }}>
                       <th style={thStyle}>Level</th><th style={thStyle}>Rate</th><th style={thStyle}>Type</th><th style={thStyle}>Example</th>

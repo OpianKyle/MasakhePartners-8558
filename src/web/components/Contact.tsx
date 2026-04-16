@@ -78,7 +78,7 @@ export default function Contact() {
           </h2>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "56px", alignItems: "start" }}>
+        <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "56px", alignItems: "start" }}>
           {/* Left: contact info */}
           <div>
             {[

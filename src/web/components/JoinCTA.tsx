@@ -256,7 +256,7 @@ export default function JoinCTA() {
               </div>
 
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+                <div className="join-form-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
                   {[{ label: "Full Name", key: "name", placeholder: "e.g. Thandi Mokoena", type: "text" },
                     { label: "Email Address", key: "email", placeholder: "your@email.com", type: "email" },
                     { label: "Phone Number", key: "phone", placeholder: "+27 82 000 0000", type: "tel" },

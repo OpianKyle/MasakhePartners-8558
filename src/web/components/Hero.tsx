@@ -144,7 +144,7 @@ export default function Hero() {
           </div>
 
           {/* Right: photo + floating cards */}
-          <div className="fade-item" style={{ opacity: 0, transform: "translateY(30px)", transition: "all 0.7s ease", position: "relative" }}>
+          <div className="fade-item hero-right" style={{ opacity: 0, transform: "translateY(30px)", transition: "all 0.7s ease", position: "relative" }}>
             <div style={{
               position: "relative", borderRadius: "6px", overflow: "hidden",
               border: "1px solid rgba(17,136,73,0.35)",
@@ -190,7 +190,7 @@ export default function Hero() {
         </div>
 
         {/* Stats bar */}
-        <div className="fade-item" style={{
+        <div className="fade-item hero-stats" style={{
           opacity: 0, transform: "translateY(30px)", transition: "all 0.7s ease",
           display: "grid", gridTemplateColumns: "repeat(4, 1fr)",
           marginTop: "80px",
