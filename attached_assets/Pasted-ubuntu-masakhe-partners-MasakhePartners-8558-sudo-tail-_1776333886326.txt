@@ -1,0 +1,33 @@
+ubuntu@masakhe-partners:~/MasakhePartners-8558$ sudo tail -5 /var/log/nginx/error.log
+2026/04/16 10:03:35 [error] 35743#35743: *128 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 102.39.215.42, server: masakhe-partners.co.za, request: "GET / HTTP/1.1", host: "masakhe-partners.co.za"
+2026/04/16 10:03:35 [error] 35743#35743: *129 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 102.39.215.42, server: masakhe-partners.co.za, request: "GET / HTTP/1.1", host: "masakhe-partners.co.za"
+2026/04/16 10:03:36 [error] 35743#35743: *130 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 102.39.215.42, server: masakhe-partners.co.za, request: "GET /favicon.ico HTTP/1.1", host: "masakhe-partners.co.za", referrer: "https://masakhe-partners.co.za/"
+2026/04/16 10:03:39 [error] 35743#35743: *133 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 102.39.215.42, server: masakhe-partners.co.za, request: "GET / HTTP/1.1", host: "154.65.106.234"
+2026/04/16 10:03:39 [error] 35743#35743: *135 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 102.39.215.42, server: masakhe-partners.co.za, request: "GET /favicon.ico HTTP/1.1", host: "154.65.106.234", referrer: "https://154.65.106.234/"
+ubuntu@masakhe-partners:~/MasakhePartners-8558$ find /home/ubuntu/MasakhePartners-8558/dist -maxdepth 2
+/home/ubuntu/MasakhePartners-8558/dist
+/home/ubuntu/MasakhePartners-8558/dist/logo.svg
+/home/ubuntu/MasakhePartners-8558/dist/og-image.png
+/home/ubuntu/MasakhePartners-8558/dist/index.html
+/home/ubuntu/MasakhePartners-8558/dist/runable.js
+/home/ubuntu/MasakhePartners-8558/dist/assets
+/home/ubuntu/MasakhePartners-8558/dist/assets/index-CmC5ow11.css
+/home/ubuntu/MasakhePartners-8558/dist/assets/index-BD-T0C-f.js
+/home/ubuntu/MasakhePartners-8558/dist/favicon.ico
+/home/ubuntu/MasakhePartners-8558/dist/images
+/home/ubuntu/MasakhePartners-8558/dist/images/smme-owner.jpg
+/home/ubuntu/MasakhePartners-8558/dist/images/partner-woman.png
+/home/ubuntu/MasakhePartners-8558/dist/images/team-meeting.png
+/home/ubuntu/MasakhePartners-8558/dist/images/partner-laptop.jpg
+/home/ubuntu/MasakhePartners-8558/dist/images/partner-man.png
+/home/ubuntu/MasakhePartners-8558/dist/images/boardroom.jpg
+/home/ubuntu/MasakhePartners-8558/dist/images/testimonial-4.png
+/home/ubuntu/MasakhePartners-8558/dist/images/earnings-visual.png
+/home/ubuntu/MasakhePartners-8558/dist/images/johannesburg-skyline.png
+/home/ubuntu/MasakhePartners-8558/dist/images/phone-dashboard.jpg
+/home/ubuntu/MasakhePartners-8558/dist/images/testimonial-3.png
+/home/ubuntu/MasakhePartners-8558/dist/images/success-flatlay.png
+/home/ubuntu/MasakhePartners-8558/dist/images/testimonial-1.png
+/home/ubuntu/MasakhePartners-8558/dist/images/testimonial-2.png
+/home/ubuntu/MasakhePartners-8558/dist/images/network-bg.png
+ubuntu@masakhe-partners:~/MasakhePartners-8558$
