@@ -1,0 +1,39 @@
+ubuntu@masakhe-partners:~/MasakhePartners-8558$ pm2 delete all
+
+pm2 start /home/ubuntu/MasakhePartners-8558/src/api/server.ts \
+  --name masakhe-api \
+  --interpreter /home/ubuntu/.bun/bin/bun
+
+pm2 save
+[PM2] Applying action deleteProcessId on app [all](ids: [ 0 ])
+[PM2] [masakhe-api](0) ✓
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+[PM2] Starting /home/ubuntu/MasakhePartners-8558/src/api/server.ts in fork_mode (1 instance)
+[PM2] Done.
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ masakhe-api        │ fork     │ 0    │ online    │ 0%       │ 548.0kb  │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+[PM2] Saving current process list...
+[PM2] Successfully saved in /home/ubuntu/.pm2/dump.pm2
+ubuntu@masakhe-partners:~/MasakhePartners-8558$ pm2 logs masakhe-api --lines 10
+[TAILING] Tailing last 10 lines for [masakhe-api] process (change the value with --lines option)
+/home/ubuntu/.pm2/logs/masakhe-api-error.log last 10 lines:
+0|masakhe- | /usr/bin/bash: line 1: bun: command not found
+0|masakhe- | /usr/bin/bash: line 1: bun: command not found
+0|masakhe- | /usr/bin/bash: line 1: bun: command not found
+0|masakhe- | /usr/bin/bash: line 1: bun: command not found
+0|masakhe- | /usr/bin/bash: line 1: bun: command not found
+0|masakhe- | /usr/bin/bash: line 1: bun: command not found
+0|masakhe- | /usr/bin/bash: line 1: bun: command not found
+0|masakhe- | /usr/bin/bash: line 1: bun: command not found
+0|masakhe- | /usr/bin/bash: line 1: bun: command not found
+0|masakhe- | /usr/bin/bash: line 1: bun: command not found
+
+/home/ubuntu/.pm2/logs/masakhe-api-out.log last 10 lines:
+0|masakhe- | Started development server: http://localhost:8080
+0|masakhe- | Started development server: http://localhost:8080
+
