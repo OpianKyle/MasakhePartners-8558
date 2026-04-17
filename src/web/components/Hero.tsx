@@ -96,7 +96,7 @@ export default function Hero() {
               opacity: 0, transform: "translateY(30px)", transition: "all 0.7s ease",
               display: "flex", gap: "16px", flexWrap: "wrap", marginBottom: "48px",
             }}>
-              <a href="https://masakhegroup.co.za/partner/register" target="_blank" rel="noopener noreferrer" style={{
+              <a href="https://masakheportal.co.za/partner/register" target="_blank" rel="noopener noreferrer" style={{
                 padding: "16px 38px",
                 background: "#118849", border: "none", color: "#ffffff",
                 fontFamily: "DM Sans, sans-serif", fontWeight: "700",

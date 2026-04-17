@@ -68,7 +68,7 @@ export default function Navbar() {
                 onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.72)")}
               >{link.label}</button>
             ))}
-            <a href="https://masakhegroup.co.za/partner/register" target="_blank" rel="noopener noreferrer" style={{
+            <a href="https://masakheportal.co.za/partner/register" target="_blank" rel="noopener noreferrer" style={{
               padding: "9px 22px", background: "#118849", border: "none", color: C.white,
               borderRadius: "4px", fontSize: "13px", fontFamily: "DM Sans, sans-serif", fontWeight: "700", cursor: "pointer",
               textDecoration: "none", display: "inline-block", transition: "background 0.2s",
@@ -96,7 +96,7 @@ export default function Navbar() {
               }}>{link.label}</button>
             ))}
             <div style={{ display: "flex", gap: "12px", marginTop: "16px" }}>
-              <a href="https://masakhegroup.co.za/partner/register" target="_blank" rel="noopener noreferrer" style={{
+              <a href="https://masakheportal.co.za/partner/register" target="_blank" rel="noopener noreferrer" style={{
                 flex: 1, padding: "10px", background: "#118849", border: "none", color: C.white,
                 borderRadius: "4px", fontSize: "14px", fontFamily: "DM Sans, sans-serif", fontWeight: "700", cursor: "pointer",
                 textDecoration: "none", textAlign: "center", display: "block",

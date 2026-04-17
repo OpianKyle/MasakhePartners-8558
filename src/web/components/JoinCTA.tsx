@@ -193,7 +193,7 @@ export default function JoinCTA() {
               </ul>
 
               <a
-                href="https://masakhegroup.co.za/partner/register"
+                href="https://masakheportal.co.za/partner/register"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
